@@ -64,7 +64,7 @@ const Carousal = (props) => {
   };
 
   return (
-    <div className="w-full flex justify-center p-7 ">
+    <div className=" flex justify-center py-7 ">
       <div
         className="relative overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105 w-1/2 object-cover h-72"
         onMouseEnter={handleMouseEnter}

@@ -1,6 +1,9 @@
 import React from "react";
 import { cloudinary_url } from "../utils/constants";
 import ImageCarousel from "../components/ImageCarousel";
+import CarouselTestimonial from "../components/CustomerCarousel";
+import CustomerCarousel from "../components/CustomerCarousel";
+import CarouselProject from "../components/CarouselProject";
 
 const Customers = () => {
   return (
@@ -26,7 +29,8 @@ const Customers = () => {
           />
         ))} */}
 
-        <ImageCarousel />
+        {/* <ImageCarousel /> */}
+        {/* <CustomerCarousel /> */}
       </div>
     </div>
   );

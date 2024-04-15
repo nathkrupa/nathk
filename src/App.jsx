@@ -17,6 +17,7 @@ function App() {
         <About />
         <Owners />
         <Projects />
+
         <Customers />
         <Footer />
       </div>

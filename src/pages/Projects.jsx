@@ -4,6 +4,7 @@ import { cloudinary_url, projects } from "../utils/constants";
 import { CarouselPlugin } from "../components/CarouselPlugin";
 import ImageCarousel from "../components/ImageCarousel";
 import ProjectCarousel from "../components/ProjectCarousel";
+import CarouselProject from "../components/CarouselProject";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,7 +23,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-8 flex flex-col border-b-2 min-h-screen ">
+    <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center">
       <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
         Our Projects :{" "}
         <span className="bg-red-700 text-xl p-4 text-white">
@@ -34,7 +35,7 @@ const Projects = () => {
         Developers Ploting
       </p>
 
-      <div className=" overflow-hidden ">
+      <div className="   w-full h-screen">
         {/* {projects.map((project, index) => (
           <Carousal
             key={index}
@@ -46,9 +47,9 @@ const Projects = () => {
           />
         ))} */}
 
-        <ProjectCarousel images={projectImages} />
+        <CarouselProject />
 
-        {/* <CarouselPlugin projects={projects} /> */}
+        {/* <Carousal /> */}
       </div>
     </div>
   );
