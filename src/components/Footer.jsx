@@ -11,7 +11,7 @@ import GoogleMaps from "./GoogleMaps";
 
 const Footer = () => {
   return (
-    <div className="py-8 flex justify-center gap-20 items-center ">
+    <div className="py-8 flex justify-center gap-20 items-center flex-wrap">
       <div>
         <div className="flex">
           <img
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="px-4">
+      <div className="px-4 hidden md:flex flex-col">
         <h1 className="text-2xl font-semibold pb-10">Pages</h1>
         <ul className="flex flex-col gap-4 text-lg font-semibold">
           <li>About us</li>
