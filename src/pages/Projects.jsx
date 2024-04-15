@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousal from "../components/Carousal";
 import { cloudinary_url, projects } from "../utils/constants";
-import { CarouselPlugin } from "../components/CarouselPlugin";
 import ImageCarousel from "../components/ImageCarousel";
-import ProjectCarousel from "../components/ProjectCarousel";
 import CarouselProject from "../components/CarouselProject";
 
 const Projects = () => {
@@ -35,18 +33,7 @@ const Projects = () => {
         Developers Ploting
       </p>
 
-      <div className="   w-full h-screen">
-        {/* {projects.map((project, index) => (
-          <Carousal
-            key={index}
-            name={project.name}
-            description={project.description}
-            coverImage={project.coverImage}
-            isActive={index === activeIndex}
-            isNext={index === (activeIndex + 1) % projects.length}
-          />
-        ))} */}
-
+      <div className="   w-full ">
         <CarouselProject />
 
         {/* <Carousal /> */}
