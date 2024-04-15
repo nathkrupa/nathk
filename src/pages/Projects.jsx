@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Carousal from "../components/Carousal";
-import { projects } from "../utils/constants";
+import { cloudinary_url, projects } from "../utils/constants";
 import { CarouselPlugin } from "../components/CarouselPlugin";
+import ImageCarousel from "../components/ImageCarousel";
+import ProjectCarousel from "../components/ProjectCarousel";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,6 +15,11 @@ const Projects = () => {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const projectImages = [
+    cloudinary_url + projects[0].coverImage,
+    cloudinary_url + projects[1].coverImage,
+  ];
 
   return (
     <div className="mt-8 flex flex-col border-b-2 min-h-screen ">
@@ -27,8 +34,8 @@ const Projects = () => {
         Developers Ploting
       </p>
 
-      <div className="relative overflow-hidden">
-        {projects.map((project, index) => (
+      <div className=" overflow-hidden ">
+        {/* {projects.map((project, index) => (
           <Carousal
             key={index}
             name={project.name}
@@ -37,7 +44,9 @@ const Projects = () => {
             isActive={index === activeIndex}
             isNext={index === (activeIndex + 1) % projects.length}
           />
-        ))}
+        ))} */}
+
+        <ProjectCarousel images={projectImages} />
 
         {/* <CarouselPlugin projects={projects} /> */}
       </div>
