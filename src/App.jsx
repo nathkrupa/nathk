@@ -1,25 +1,25 @@
-import Footer from "./components/Footer";
+import React from "react";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Customers from "./pages/Customers";
 import Home from "./pages/Home";
-import Owners from "./pages/Owners";
 import Projects from "./pages/Projects";
 
 function App() {
   return (
     <div className="bg-gray-100">
-      <div className="min-h-screen mb-20">
+      <div id="home">
         <Navbar />
         <Home />
       </div>
-      <div className="">
+      <div id="about" className="pt-8">
         <About />
-        <Owners />
+      </div>
+      <div id="projects">
         <Projects />
-
+      </div>
+      <div id="customers">
         <Customers />
-        <Footer />
       </div>
     </div>
   );

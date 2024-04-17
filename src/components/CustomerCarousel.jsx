@@ -9,7 +9,7 @@ const CustomerCarousel = ({ customers }) => {
       setCurrentSlide((prevSlide) =>
         prevSlide === customers.length - 1 ? 0 : prevSlide + 1
       );
-    }, 1000); // Change slide every 1 seconds
+    }, 2000); // Change slide every 1 seconds
 
     return () => clearInterval(interval);
   }, [currentSlide, customers.length]);

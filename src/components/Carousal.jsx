@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cloudinary_url, projects } from "../utils/constants";
-
+import { Link } from "react-router-dom";
 const Carousal = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -36,9 +36,11 @@ const Carousal = (props) => {
           <p className="text-white text-base px-4 md:w-4/5 pb-2">
             {description}
           </p>
-          <button className="mt-2 mx-4 bg-white text-sm py-2 px-4">
-            Learn More
-          </button>
+          <Link to={`/${name.replace(/\s/g, "").toLowerCase()}`}>
+            <button className="mt-2 mx-4 bg-white text-sm py-2 px-4">
+              Learn More
+            </button>{" "}
+          </Link>
         </div>
       </div>
     </div>
