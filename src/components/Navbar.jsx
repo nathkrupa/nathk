@@ -18,19 +18,19 @@ const Navbar = () => {
           className=" w-20 object-cover "
         />
         <ul className="hidden  gap-16 text-lg font-semibold font-poppins md:flex">
-          <li>
-            <Link onClick={() => scrollToSection("home")}>Home</Link>{" "}
+          <li className="hover:text-purple-700">
+            <Link to={"/"}>Home</Link>{" "}
           </li>
-          <li>
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("about")}>About</Link>
           </li>
-          <li>
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("projects")}>Projects</Link>
           </li>
-          <li>
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("customers")}>Customers</Link>
           </li>
-          <li>
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("contact")}>Contact</Link>
           </li>
         </ul>

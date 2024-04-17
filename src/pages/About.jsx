@@ -3,7 +3,7 @@ import { cloudinary_url } from "../utils/constants";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center border-b-2">
+    <div className="flex flex-col items-center justify-center border-b-2 min-h-screen">
       <h1 className="text-4xl  md:text-6xl font-serif font-bold text-center">
         About Us
       </h1>

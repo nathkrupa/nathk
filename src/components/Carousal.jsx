@@ -37,7 +37,7 @@ const Carousal = (props) => {
             {description}
           </p>
           <Link to={`/${name.replace(/\s/g, "").toLowerCase()}`}>
-            <button className="mt-2 mx-4 bg-white text-sm py-2 px-4">
+            <button className="mt-2 mx-4 bg-white text-sm py-2 px-4 hover:bg-purple-600 hover:text-white">
               Learn More
             </button>{" "}
           </Link>
