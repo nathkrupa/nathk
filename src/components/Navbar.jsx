@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="flex items-center justify-center bg-white-A700 p-2 fixed top-0 left-0 right-0 shadow-md bg-white">
+    <header className="flex items-center justify-center p-2 fixed top-0 left-0 right-0 shadow-md bg-white z-50">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-5 px-4">
         <img
           src="https://res.cloudinary.com/dvdrkucjh/image/upload/ujhd6oa8n0sgtbqlaggz"

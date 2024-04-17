@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className=" bg-[url(https://res.cloudinary.com/dvdrkucjh/image/upload/ac8i29p3jaq7e5y5we3j)] bg-cover bg-no-repeat mt-32 items-center self-stretch bg-gray-100 shadow-md">
       <div className="flex flex-col items-start gap-[35px] bg-gradient-to-t from-black to-transparent py-28 md:pl-28 pr-14 p-5 text-white">
-        <h1 className="text-6xl md:text-8xl font-serif text-white font-semibold">
+        <h1 className="text-5xl md:text-8xl font-serif text-white font-semibold p-2">
           <>
             Nathkrupa Developers
             <br />

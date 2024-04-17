@@ -23,7 +23,7 @@ const ImageCarousel = () => {
   }, [images.length]);
 
   return (
-    <div className="flex overflow-x-auto">
+    <div className="flex overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}

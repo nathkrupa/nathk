@@ -11,9 +11,9 @@ import GoogleMaps from "./GoogleMaps";
 
 const Footer = () => {
   return (
-    <div className="py-8 flex justify-center gap-20 items-center flex-wrap">
+    <div className="py-8  flex justify-center gap-20 items-center flex-wrap">
       <div>
-        <div className="flex">
+        <div className="flex ">
           <img
             src="https://res.cloudinary.com/dvdrkucjh/image/upload/ujhd6oa8n0sgtbqlaggz"
             alt="logo"

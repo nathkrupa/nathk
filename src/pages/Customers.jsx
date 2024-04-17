@@ -19,7 +19,7 @@ const Customers = () => {
         satisfaction of our customers
       </p>
 
-      <div className="flex gap-5 overflow-x-auto">
+      <div className="w-full max-h-1/2 ">
         {/* {customerImages.map((image, index) => (
           <img
             key={index}
@@ -31,6 +31,18 @@ const Customers = () => {
 
         {/* <ImageCarousel /> */}
         {/* <CustomerCarousel /> */}
+
+        <CustomerCarousel
+          customers={[
+            "v9zf9qtyomz8erhjbsdz",
+            "oq7xu8plkxg9s8xglfqz",
+            "usmwejvsji3aoan0hl4i",
+            "qjycqkyxn5zjj3ausq9f",
+            "kcwox0mhtykgojab5mvd",
+            "bvhmksfdqomyuh8zcsdz",
+            "baiea5fwhos494bt1ek6",
+          ]}
+        />
       </div>
     </div>
   );

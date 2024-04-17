@@ -11,13 +11,13 @@ const About = () => {
         “Success is not just about making deals; it&#39;s about building
         relationships, creating value, and leaving a lasting legacy.”
       </p>
-      <div className="md:flex my-4 p-4 gap-6 w-10/12">
+      <div className="md:flex my-4 p-2 gap-6 w-10/12">
         <img
           src={`${cloudinary_url}keoreestm929mzkt0gdb`}
           alt="about"
           className="md:h-96 md:w-1/2 shadow-lg"
         />
-        <p className="p-4  text-lg md:w-1/2">
+        <p className="p-2  text-lg md:w-1/2">
           <>
             Welcome to Nathkrupa Developers Ploting, where visionary planning
             meets unparalleled execution. Founded by esteemed businessmen

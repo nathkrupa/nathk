@@ -20,7 +20,7 @@ const Owners = () => {
           alt="owners"
           className=" md:w-1/4  shadow-lg"
         />
-        <p className="p-4  text-lg md:w-4/6">
+        <p className="py-4  text-lg md:w-4/6">
           <>
             Swapnil Pawar, a dynamic entrepreneur with a keen eye for
             innovation, brings years of expertise in real estate development to
