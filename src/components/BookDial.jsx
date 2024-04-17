@@ -10,7 +10,7 @@ export function BookDial() {
   return (
     <>
       <Button
-        className="px-8 py-4 font-semibold shadow-md m-4 bg-purple-600 text-white hover:shadow-xl"
+        className="px-4 py-2 rounded-none font-semibold shadow-md m-4 bg-purple-600 text-white hover:shadow-xl"
         onClick={() => setOpenModal(true)}
       >
         Book Now{" "}

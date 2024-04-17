@@ -17,7 +17,7 @@ const Carousal = (props) => {
   return (
     <div className=" flex justify-center py-7 ">
       <div
-        className="relative overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105 w-full md:w-1/2 object-cover h-72 px-2"
+        className="relative overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105 w-full  object-cover h-72 px-2"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -29,7 +29,7 @@ const Carousal = (props) => {
         ></div>
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-t from-black opacity-50 z-10"></div>{" "}
         {/* Lighter black gradient */}
-        <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 font-serif z-20">
+        <div className="absolute bottom-0 left-0 right-0 px-8 pb-4 font-serif z-20">
           <h2 className="text-white text-3xl md:text-5xl p-4 font-bold">
             {name}
           </h2>

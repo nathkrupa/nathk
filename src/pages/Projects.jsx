@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Carousal from "../components/Carousal";
-import { cloudinary_url, projects } from "../utils/constants";
-import ImageCarousel from "../components/ImageCarousel";
+
 import CarouselProject from "../components/CarouselProject";
 
 const Projects = () => {
@@ -14,11 +12,6 @@ const Projects = () => {
 
     return () => clearInterval(intervalId);
   }, []);
-
-  const projectImages = [
-    cloudinary_url + projects[0].coverImage,
-    cloudinary_url + projects[1].coverImage,
-  ];
 
   return (
     <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center">
@@ -33,7 +26,7 @@ const Projects = () => {
         Developers Ploting
       </p>
 
-      <div className="   w-full ">
+      <div className="w-full md:w-1/2 ">
         <CarouselProject />
 
         {/* <Carousal /> */}

@@ -5,6 +5,8 @@ import Customers from "./pages/Customers";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
+import Owners from "./pages/Owners";
+
 function App() {
   return (
     <div className="bg-gray-100">
@@ -15,13 +17,18 @@ function App() {
       <div id="about" className="pt-8">
         <About />
       </div>
+      <div>
+        <Owners />
+      </div>
       <div id="projects">
         <Projects />
       </div>
       <div id="customers">
         <Customers />
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

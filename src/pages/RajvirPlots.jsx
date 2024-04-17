@@ -127,10 +127,6 @@ const RajvirPlots = () => {
               ]}
             />
 
-            <button className="px-8 py-4 font-semibold shadow-md m-4 bg-purple-600 text-white hover:shadow-xl">
-              Book Now
-            </button>
-
             <BookDial />
           </div>
         </div>

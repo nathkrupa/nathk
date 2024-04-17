@@ -16,7 +16,7 @@ const Home = () => {
           Quality Meets Affordability. Explore Prime Locations in Kharadi,
           Awalwadi, and Wagoli for Your Perfect Investment.
         </p>
-        <button className="bg-white px-7 mb-28  py-4 text-black font-poppins font-semibold text-lg hover:bg-purple-600 hover:text-white">
+        <button className="bg-white px-7 mb-28 shadow-lg  py-4 text-black font-poppins font-semibold text-lg hover:bg-purple-600 hover:text-white">
           Learn More
         </button>
       </div>

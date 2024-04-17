@@ -4,6 +4,8 @@ import GoogleMaps from "../components/GoogleMaps";
 import { cloudinary_url } from "../utils/constants";
 import CustomerCarousel from "../components/CustomerCarousel";
 import Footer from "../components/Footer";
+import { BookDial } from "../components/BookDial";
+import { LayoutDial } from "../components/LayoutDial";
 
 const YashPark = () => {
   // const sectionOneImg = [
@@ -66,8 +68,7 @@ const YashPark = () => {
             src={`${cloudinary_url}${"wre9etdqnmd2mhoks5ir"}`}
             alt="amations"
           />
-          <h1 className="py-4 px-8 bg-white shadow-lg">Check Layout</h1>
-
+          <LayoutDial />
           <div className="min-h-screen border-b-2">
             <img
               src={`${cloudinary_url}${"p1vrdxuevul8x25qwfd6"}`}
@@ -90,9 +91,7 @@ const YashPark = () => {
               ]}
             />
 
-            <button className="px-8 py-4 font-semibold shadow-md m-4 bg-purple-600 text-white hover:shadow-xl">
-              Book Now
-            </button>
+            <BookDial />
           </div>
         </div>
         <Footer />
