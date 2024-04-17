@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import GoogleMaps from "../components/GoogleMaps";
 import { cloudinary_url } from "../utils/constants";
 import CustomerCarousel from "../components/CustomerCarousel";
 import Footer from "../components/Footer";
+import { LayoutDial } from "../components/LayoutDial";
+import { BookDial } from "../components/BookDial";
 
 const RajvirPlots = () => {
-  // const sectionOneImg = [
+  const [currentSection, setCurrentSection] = useState("sectionOne");
 
-  // ]
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSection((prevSection) =>
+        prevSection === "sectionOne" ? "sectionTwo" : "sectionOne"
+      );
+    }, 3000); // Switch sections every 3 seconds
 
-  // const sectionOne = (
-  //     <div >
-  //         <img src={} />
+    return () => clearInterval(interval);
+  }, []);
 
-  //     </div>
-  // )
+  const sectionOneImg = [
+    "yxdghzrpwhgrsbygvxfl",
+    "s0vbzdosfpuualrgouuh",
+    "lvxmq301htsuk6blwldb",
+    "z0g5kixzgybv6hhpook4",
+  ];
+
+  const sectionTwoImg = [
+    "rt8p89nosc91rzoovkts",
+    "m4jdq7mkjczm7rn3mhkb",
+    "lwyck6yftmdjfkhtihqi",
+  ];
 
   return (
     <div className="min-h-screen">
@@ -32,8 +48,28 @@ const RajvirPlots = () => {
             Discover Tranquil Living at Rajvir Plots – Where Serenity Meets
             Convenience.
           </p>
+          {currentSection === "sectionOne" ? (
+            <div className="grid grid-cols-2 gap-5 p-4 w-3/4">
+              {sectionOneImg.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${cloudinary_url}${img}`}
+                  alt={`sectionOne-${index}`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex gap-5 p-4 w-3/4 justify-center items-center">
+              {sectionTwoImg.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${cloudinary_url}${img}`}
+                  alt={`sectionTwo-${index}`}
+                />
+              ))}
+            </div>
+          )}{" "}
         </div>
-        ////
         {/* Project location and details */}
         <div className="flex flex-col justify-center items-center min-h-screen">
           <h1 className="text-2xl font-semibold p-4">
@@ -66,7 +102,8 @@ const RajvirPlots = () => {
             src={`${cloudinary_url}${"wre9etdqnmd2mhoks5ir"}`}
             alt="amations"
           />
-          <h1 className="py-4 px-8 bg-white shadow-lg">Check Layout</h1>
+
+          <LayoutDial />
 
           <div className="min-h-screen border-b-2">
             <img
@@ -93,6 +130,8 @@ const RajvirPlots = () => {
             <button className="px-8 py-4 font-semibold shadow-md m-4 bg-purple-600 text-white hover:shadow-xl">
               Book Now
             </button>
+
+            <BookDial />
           </div>
         </div>
         <Footer />
