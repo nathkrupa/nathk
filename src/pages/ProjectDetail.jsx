@@ -21,6 +21,7 @@ const ProjectDetail = ({
   layoutImg,
 }) => {
   const [currentSection, setCurrentSection] = useState("sectionOne");
+  const [showFirstImage, setShowFirstImage] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,11 +33,15 @@ const ProjectDetail = ({
     return () => clearInterval(interval);
   }, []);
 
+  const toggleImage = () => {
+    setShowFirstImage(!showFirstImage);
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="">
       <Navbar />
       <div className="flex justify-center items-center flex-col">
-        <div className="flex flex-col justify-center items-center mt-48 min-h-screen ">
+        <div className="flex flex-col justify-center items-center mt-48">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
             {projectName}{" "}
           </h1>
@@ -92,7 +97,37 @@ const ProjectDetail = ({
             )}
           </div> */}
 
-          <img src={`${cloudinary_url}wre9etdqnmd2mhoks5ir`} alt="amations" />
+          <img
+            className="hidden md:block"
+            src={`${cloudinary_url}wre9etdqnmd2mhoks5ir`}
+            alt="amations"
+          />
+
+          {showFirstImage ? (
+            <img
+              src={`${cloudinary_url}x5nkiwflvteqy5msylc5`}
+              alt="First Image"
+              className=" max-w-full"
+            />
+          ) : (
+            <img
+              src={`${cloudinary_url}jhj41ojxcmhzc5vvjwzp`}
+              alt="Second Image"
+              className=" max-w-full"
+            />
+          )}
+          {/** "Show More" button for toggling between images on mobile view */}
+          <button
+            onClick={toggleImage}
+            className="my-4 px-4 py-2 mb-6 bg-purple-500 text-white "
+          >
+            {showFirstImage ? "Show More" : "Show Less"}
+          </button>
+
+          <div className="w-full border-b-2"></div>
+
+          {/** in mobile view instead of above image i want to the show "x5nkiwflvteqy5msylc5
+" this image first and after it will be show more buttom which will also show "jhj41ojxcmhzc5vvjwzp" this image. do it */}
 
           <LayoutDial layoutImg={layoutImg} />
 
