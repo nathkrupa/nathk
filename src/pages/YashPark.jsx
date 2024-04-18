@@ -27,11 +27,7 @@ const YashPark = () => {
     "rhq676e8mkhcmczli8fr",
   ];
 
-  const sectionTwoImg = [
-    "rt8p89nosc91rzoovkts",
-    "m4jdq7mkjczm7rn3mhkb",
-    "lwyck6yftmdjfkhtihqi",
-  ];
+  const sectionTwoImg = ["tx61nflwzajvhoneo3ij", "y7c5x5cx8rgnrdxbuzly"];
   return (
     <div className="">
       <Navbar />
@@ -47,14 +43,36 @@ const YashPark = () => {
             Discover Tranquil Living at Yash Park Phase 7 – Where Serenity Meets
             Convenience.
           </p>
+          {currentSection === "sectionOne" ? (
+            <div className="flex flex-wrap  gap-5 p-4  ">
+              {sectionOneImg.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${cloudinary_url}${img}`}
+                  alt={`sectionOne-${index}`}
+                  className="shadow-lg w-36 md:w-60"
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex max-md:flex-wrap gap-5   justify-center items-center">
+              {sectionTwoImg.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${cloudinary_url}${img}`}
+                  alt={`sectionTwo-${index}`}
+                  className="shadow-lg w-36 md:w-72 h-72"
+                />
+              ))}
+            </div>
+          )}{" "}
         </div>
-        ////
         {/* Project location and details */}
-        <div className="flex flex-col justify-center items-center min-h-screen">
+        <div className="flex flex-col justify-center items-center ">
           <h1 className="text-2xl font-semibold p-4">
             Location: Awalwadi Road, near BIOVET PRIVATE LIMITED
           </h1>
-          <div className="flex justify-center items-center ">
+          <div className="flex flex-wrap p-4 justify-center items-center ">
             <p className=" text-lg p-3 w-full md:w-1/3 ">
               Yash Park, strategically positioned in the heart of Kharadi,
               offers an exceptional opportunity to own prime real estate in one
@@ -72,7 +90,7 @@ const YashPark = () => {
                 </ul>
               </span>
             </p>
-            <div className="h-72 w-1/3">
+            <div className="h-72 md:w-1/3 mb-4">
               {" "}
               <GoogleMaps />
             </div>
@@ -83,7 +101,7 @@ const YashPark = () => {
             alt="amations"
           />
           <LayoutDial />
-          <div className="min-h-screen border-b-2">
+          <div className=" border-b-2">
             <img
               src={`${cloudinary_url}${"p1vrdxuevul8x25qwfd6"}`}
               alt="layout"
@@ -92,16 +110,19 @@ const YashPark = () => {
 
           {/* satisfied Customers */}
 
-          <div className="min-h-screen w-full flex flex-col justify-center items-center border-b-2">
+          <div className="w-full flex flex-col justify-center items-center border-b-2">
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-center py-6 ">
               Satisfied Customers
             </h1>
 
             <CustomerCarousel
               customers={[
-                "v9zf9qtyomz8erhjbsdz",
+                "nxssyh6mzqjorhgaoby2",
                 "oq7xu8plkxg9s8xglfqz",
-                "usmwejvsji3aoan0hl4i",
+                "qjycqkyxn5zjj3ausq9f",
+                "kcwox0mhtykgojab5mvd",
+                "bvhmksfdqomyuh8zcsdz",
+                "baiea5fwhos494bt1ek6",
               ]}
             />
 
