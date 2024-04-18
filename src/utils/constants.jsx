@@ -9,9 +9,15 @@ export const projects = [
     coverImage: "yxdghzrpwhgrsbygvxfl",
   },
   {
-    name: "Yash Park",
+    name: "Yash Park phase 7",
     description:
       "Discover Tranquil Living at Rajvir Plots – Where Serenity Meets Convenience.",
+    coverImage: "yjjxdtwvnhcywfpdstru",
+  },
+  {
+    name: "Yash Park phase 9",
+    description:
+      "Discover Tranquil Living at Yash Park Phase 9 – Where Serenity Meets Convenience.",
     coverImage: "yjjxdtwvnhcywfpdstru",
   },
 ];

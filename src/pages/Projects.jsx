@@ -17,9 +17,6 @@ const Projects = () => {
     <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center">
       <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
         Our Projects :{" "}
-        <span className="bg-red-700 text-xl p-4 text-white">
-          Under construction
-        </span>
       </h1>
       <p className="m-4 text-center text-lg font-semibold py-4">
         Explore the portfolio of exceptional projects delivered by Nathkrupa

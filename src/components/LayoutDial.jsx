@@ -2,7 +2,7 @@ import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import { cloudinary_url } from "../utils/constants";
 
-export function LayoutDial() {
+export function LayoutDial({ layoutImg }) {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -18,10 +18,7 @@ export function LayoutDial() {
         <Modal.Body>
           <div className="space-y-6">
             <div className="space-y-6">
-              <img
-                src={`${cloudinary_url}${"p1vrdxuevul8x25qwfd6"}`}
-                alt="layout"
-              />
+              <img src={`${cloudinary_url}${layoutImg}`} alt="layout" />
             </div>
           </div>
         </Modal.Body>

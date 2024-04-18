@@ -12,6 +12,7 @@ import RajvirPlots from "./pages/RajvirPlots.jsx";
 import YashPark from "./pages/YashPark.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
+import ProjectLayout from "./pages/ProjectLayout.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,8 +20,10 @@ const router = createBrowserRouter(
       <Route path="" element={<App />} />
       <Route path="/about" element={<About />} />
 
-      <Route path="/rajvirplots" element={<RajvirPlots />} />
-      <Route path="/yashpark" element={<YashPark />} />
+      {/* <Route path="/rajvirplots" element={<RajvirPlots />} /> */}
+      {/* <Route path="/yashpark" element={<YashPark />} /> */}
+
+      <Route path="/:project" element={<ProjectLayout />} />
     </>
   )
 );
