@@ -8,8 +8,15 @@ import {
   Twitter,
 } from "lucide-react";
 import GoogleMaps from "./GoogleMaps";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="py-8 flex justify-center gap-20 items-center flex-wrap">
       <div>
@@ -32,37 +39,44 @@ const Footer = () => {
             Submit{" "}
           </button>
         </div>
-        <div className="flex justify-between mx-6">
+        <div className="flex justify-between mx-3">
           <div className="flex flex-col gap-6 font-semibold">
             <h1 className="flex">
               <span>
                 <MapPin className="text-purple-600 mr-4" />
               </span>
-              XYZ
+              City Vista, Kharadi, Pune-14
             </h1>
             <h1 className="flex">
               <span>
                 <Phone className="text-purple-600 mr-4" />
               </span>
-              +91-9822xxxx
+              +91-9822692040
             </h1>
           </div>
 
           <div className="flex gap-4">
-            <Facebook className="text-purple-600" />
-            <Instagram className="text-purple-600" />
-            <Twitter className="text-purple-600" />
-            <Linkedin className="text-purple-600" />
+            <Facebook className="text-purple-600  cursor-pointer " />
+            <Instagram className="text-purple-600 cursor-pointer " />
+            <Twitter className="text-purple-600   cursor-pointer  " />
           </div>
         </div>
       </div>
       <div className="px-4 hidden md:flex flex-col">
         <h1 className="text-2xl font-semibold pb-10">Pages</h1>
         <ul className="flex flex-col gap-4 text-lg font-semibold">
-          <li>About us</li>
-          <li>Owners</li>
-          <li>Projects</li>
-          <li>Customers</li>
+          <li className="hover:text-purple-700 ">
+            <Link to={"/"}>Home</Link>{" "}
+          </li>
+          <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("about")}>About</Link>
+          </li>
+          <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("projects")}>Projects</Link>
+          </li>
+          <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("customers")}>Customers</Link>
+          </li>
         </ul>
       </div>
       <div className="h-60 w-96">

@@ -24,7 +24,7 @@ const Owners = () => {
       </p>
 
       {currentDiv === 1 && (
-        <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12">
+        <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12 text-center">
           <div className="md:flex justify-center items-center gap-5 my-4 p-4">
             <img
               src={`${cloudinary_url}hwazyrdwzpmfqdcmvubp`}
@@ -56,8 +56,8 @@ const Owners = () => {
 
       {/* div 2 */}
       {currentDiv === 2 && (
-        <div className="md:flex justify-center items-center gap-5 my-4 p-4 w-10/12 ">
-          <div className="md:flex justify-center gap-5 my-4 p-4">
+        <div className="md:flex justify-center items-center gap-5 my-4 p-4 w-10/12 text-center">
+          <div className="md:flex justify-center gap-5 my-4 p-4 ">
             <img
               src={`${cloudinary_url}rwxfhtp9mcuvfhsjf3bq`}
               alt="owners"
@@ -78,10 +78,16 @@ const Owners = () => {
                   in quality, innovation, and customer satisfaction.
                 </>
               </p>
-              <div className="flex gap-4">
-                <Facebook className="text-purple-600" />
-                <Instagram className="text-purple-600" />
-                <Twitter className="text-purple-600" />
+              <div className="flex gap-4 justify-center">
+                <Facebook className="text-purple-600  cursor-pointer " />
+                <a
+                  href="https://www.instagram.com/swapnil_pawar_9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="text-purple-600 cursor-pointer " />
+                </a>
+                <Twitter className="text-purple-600   cursor-pointer  " />
               </div>
             </div>
           </div>{" "}
@@ -89,14 +95,14 @@ const Owners = () => {
       )}
 
       {currentDiv === 3 && (
-        <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12">
+        <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12 text-center ">
           <div className="md:flex justify-center gap-5 my-4 p-4 ">
             <img
               src={`${cloudinary_url}sd43rwddh0cwqqwhkbsp`}
               alt="owners"
               className=" md:w-80  shadow-lg"
             />
-            <div className=" w-full md:w-1/2">
+            <div className=" w-full md:w-1/2 ">
               <h1 className="text-4xl font-serif font-semibold py-2 text-center">
                 Swapnil Pawar{" "}
               </h1>
@@ -112,10 +118,10 @@ const Owners = () => {
                   trends.
                 </>
               </p>
-              <div className="flex gap-4">
-                <Facebook className="text-purple-600" />
-                <Instagram className="text-purple-600" />
-                <Twitter className="text-purple-600" />
+              <div className="flex gap-4 justify-center">
+                <Facebook className="text-purple-600  cursor-pointer " />
+                <Instagram className="text-purple-600 cursor-pointer " />
+                <Twitter className="text-purple-600   cursor-pointer  " />
               </div>
             </div>
           </div>{" "}

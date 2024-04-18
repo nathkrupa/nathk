@@ -7,21 +7,21 @@ import Footer from "../components/Footer";
 import { LayoutDial } from "../components/LayoutDial";
 import { BookDial } from "../components/BookDial";
 import { SpecialAttractions } from "../components/SpecialAttractions";
+import { ImagesDial } from "../components/ImagesDial";
+import Glide from "@glidejs/glide";
 
 const ProjectDetail = ({
-  sectionOneImg,
-  sectionTwoImg,
   projectName,
   description,
   location,
   facalities,
-  attractionSectionOne,
-  attractionSectionTwo,
+  projectImages,
   customers,
   layoutImg,
+  map,
 }) => {
   const [currentSection, setCurrentSection] = useState("sectionOne");
-  const [showFirstImage, setShowFirstImage] = useState(true);
+  const [isShowMoreAmations, setIsShowMoreAmations] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,29 +48,8 @@ const ProjectDetail = ({
           <p className="m-4 text-center text-lg font-semibold py-4">
             {description}
           </p>
-          {currentSection === "sectionOne" ? (
-            <div className="grid grid-cols-3 gap-5 p-4 w-3/4">
-              {sectionOneImg.map((img, index) => (
-                <img
-                  key={index}
-                  src={`${cloudinary_url}${img}`}
-                  alt={`sectionOne-${index}`}
-                  className="shadow-lg   "
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="flex max-md:flex-wrap gap-5  w-3/4 justify-center items-center">
-              {sectionTwoImg.map((img, index) => (
-                <img
-                  key={index}
-                  src={`${cloudinary_url}${img}`}
-                  alt={`sectionTwo-${index}`}
-                  className="shadow-lg w-36 md:w-72 h-72"
-                />
-              ))}
-            </div>
-          )}{" "}
+
+          <ImagesDial projectImages={projectImages} />
         </div>
         {/* Project location and details */}
         <div className="flex flex-col justify-center items-center ">
@@ -80,22 +59,18 @@ const ProjectDetail = ({
               className=" text-lg p-3 w-full md:w-1/3 "
               dangerouslySetInnerHTML={{ __html: facalities }}
             ></p>
-            <div className="h-72 md:w-1/3 mb-4">
-              {" "}
-              <GoogleMaps />
-            </div>
+            <div className="h-72 md:w-1/3 mb-4 pl-4">{map}</div>
           </div>
 
           {/* special Attraction layout */}
-          {/* <div className="w-1/2">
-            {" "}
-            {attractionSectionOne && (
-              <SpecialAttractions
-                imageSectionOne={attractionSectionOne}
-                imageSectionTwo={attractionSectionTwo}
-              />
-            )}
-          </div> */}
+          <div className="p-4 w-full md:w-1/2  border-t-2 border-b-2 flex flex-col justify-center text-center">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold  py-6">
+              {" "}
+              Special Attractions
+            </h1>
+
+            <SpecialAttractions />
+          </div>
 
           <img
             className="hidden md:block"
@@ -103,36 +78,38 @@ const ProjectDetail = ({
             alt="amations"
           />
 
-          {showFirstImage ? (
+          <div className="max-md:flex flex-col hidden">
             <img
               src={`${cloudinary_url}x5nkiwflvteqy5msylc5`}
               alt="First Image"
               className=" max-w-full"
             />
-          ) : (
-            <img
-              src={`${cloudinary_url}jhj41ojxcmhzc5vvjwzp`}
-              alt="Second Image"
-              className=" max-w-full"
-            />
-          )}
-          {/** "Show More" button for toggling between images on mobile view */}
-          <button
-            onClick={toggleImage}
-            className="my-4 px-4 py-2 mb-6 bg-purple-500 text-white "
-          >
-            {showFirstImage ? "Show More" : "Show Less"}
-          </button>
+            {isShowMoreAmations && (
+              <img
+                src={`${cloudinary_url}jhj41ojxcmhzc5vvjwzp`}
+                alt="Second Image"
+                className=" max-w-full"
+              />
+            )}
+            {/** "Show More" button for toggling between images on mobile view */}
+            <div className="flex justify-center my-4">
+              <button
+                onClick={() => {
+                  setIsShowMoreAmations(!isShowMoreAmations);
+                }}
+                className=" w-fit px-4 py-2 mb-6 bg-purple-500 text-white "
+              >
+                {isShowMoreAmations ? "Show Less" : "Show More"}
+              </button>
+            </div>
+          </div>
 
-          <div className="w-full border-b-2"></div>
+          <div className="py-6 flex flex-col justify-center items-center  border-t-2">
+            <LayoutDial layoutImg={layoutImg} />
 
-          {/** in mobile view instead of above image i want to the show "x5nkiwflvteqy5msylc5
-" this image first and after it will be show more buttom which will also show "jhj41ojxcmhzc5vvjwzp" this image. do it */}
-
-          <LayoutDial layoutImg={layoutImg} />
-
-          <div className=" border-b-2">
-            <img src={`${cloudinary_url}${layoutImg}`} alt="layout" />
+            <div className=" border-b-2">
+              <img src={`${cloudinary_url}${layoutImg}`} alt="layout" />
+            </div>
           </div>
 
           {/* satisfied Customers */}
@@ -141,8 +118,10 @@ const ProjectDetail = ({
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-center py-6 ">
               Satisfied Customers
             </h1>
-
-            <CustomerCarousel customers={customers} />
+            <div className="max-w-screen">
+              {" "}
+              <CustomerCarousel customers={customers} />
+            </div>
 
             <BookDial />
           </div>

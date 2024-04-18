@@ -1,31 +1,27 @@
 import { Carousel } from "flowbite-react";
 import { cloudinary_url } from "../utils/constants";
 
-export function SpecialAttractions({ imageSectionOne, imageSectionTwo }) {
+export function SpecialAttractions() {
+  const SpecialAttractionsImages = [
+    "jwfnbli8gocvlwplknsf",
+    "p470i2cenuzrhccwszxp",
+    "gyzpp1zfaplkoiaxssy9",
+    "e2nnxavvrzyzvuvwfjyi",
+    "bcwoh6kw89xuq2bmwhpz",
+    "d20li7xik3xe5ezymubx",
+  ];
   return (
-    <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
-      <Carousel>
-        {imageSectionOne &&
-          imageSectionOne.map((img, index) => (
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 ">
+      <Carousel slideInterval={2000}>
+        {SpecialAttractionsImages &&
+          SpecialAttractionsImages.map((img, index) => (
             <div>
               <img
                 key={index}
                 src={`${cloudinary_url}${img}`}
-                alt={`sectionOne-${index}`}
-                className="w-80"
+                alt={`${index}`}
               />
             </div>
-          ))}
-      </Carousel>
-      <Carousel indicators={false}>
-        {imageSectionTwo &&
-          imageSectionTwo.map((img, index) => (
-            <img
-              key={index}
-              src={`${cloudinary_url}${img}`}
-              alt={`sectionTwo-${index}`} // Corrected the alt attribute to use "sectionTwo"
-              className="w-80"
-            />
           ))}
       </Carousel>
     </div>

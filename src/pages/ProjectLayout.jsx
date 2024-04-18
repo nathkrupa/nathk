@@ -4,30 +4,28 @@ import ProjectDetail from "./ProjectDetail";
 
 const ProjectLayout = () => {
   let { project } = useParams();
-  const [sectionOneImg, setSectionOneImg] = useState([]);
-  const [sectionTwoImg, setSectionTwoImg] = useState([]);
+
   const [projectName, setProjectName] = useState("");
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [facalities, setFacalities] = useState("");
   const [amations, setAmations] = useState(false);
   const [customers, setCustomers] = useState([]);
-  const [attractionSectionOne, setAttractionSectionOne] = useState([]);
-  const [attractionSectionTwo, setAttractionSectionTwo] = useState([]);
+  const [map, setMap] = useState();
   const [layoutImg, setLayoutImg] = useState("");
+  const [projectImages, setProjectImages] = useState([]);
+
   useEffect(() => {
     // route to rajvirplots
     if (project === "rajvirplots") {
-      setSectionOneImg([
+      setProjectImages([
         "yxdghzrpwhgrsbygvxfl",
         "lvxmq301htsuk6blwldb",
         "z0g5kixzgybv6hhpook4",
-      ]);
-      setSectionTwoImg([
         "rt8p89nosc91rzoovkts",
-        // "m4jdq7mkjczm7rn3mhkb",
         "lwyck6yftmdjfkhtihqi",
       ]);
+
       setProjectName("Rajvir Plots");
       setDescription(
         "Discover Tranquil Living at Rajvir Plots – Where Serenity Meets Convenience."
@@ -49,6 +47,17 @@ const ProjectLayout = () => {
           </ul>
         </span>`);
 
+      setMap(
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3782.506624299604!2d73.97994977519242!3d18.55118468254827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMzJzA0LjMiTiA3M8KwNTgnNTcuMSJF!5e0!3m2!1sen!2sin!4v1713478094477!5m2!1sen!2sin"
+          width="400"
+          height="300"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      );
+
       setLayoutImg("p1vrdxuevul8x25qwfd6");
 
       setCustomers([
@@ -61,14 +70,23 @@ const ProjectLayout = () => {
       ]);
     }
 
-    //route to yashparkphase8
+    //route to yashparkphase7
     if (project === "yashparkphase7") {
-      setSectionOneImg([
+      // setSectionOneImg([
+      //   "dzjucbikbmodcgbxz0wr",
+      //   "p0mzhgplcuybp2zguxvb",
+      //   "yjjxdtwvnhcywfpdstru",
+      // ]);
+      // setSectionTwoImg([
+      //   "rhq676e8mkhcmczli8fr",
+      //   "tx61nflwzajvhoneo3ij",
+      //   "y7c5x5cx8rgnrdxbuzly",
+      // ]);
+
+      setProjectImages([
         "dzjucbikbmodcgbxz0wr",
         "p0mzhgplcuybp2zguxvb",
         "yjjxdtwvnhcywfpdstru",
-      ]);
-      setSectionTwoImg([
         "rhq676e8mkhcmczli8fr",
         "tx61nflwzajvhoneo3ij",
         "y7c5x5cx8rgnrdxbuzly",
@@ -95,19 +113,16 @@ const ProjectLayout = () => {
                 </ul>
               </span>`);
 
-      setAttractionSectionOne([
-        "zikeorc7rbrsisu91sph",
-        "uaquumrp0xzxwppquotw",
-        "kiz4bhlqszilmeohteie",
-        "ijjcdgd71j3v21dxvx6w",
-      ]);
-
-      setAttractionSectionTwo([
-        "b9tcgpvzdpeewbd5njnq",
-        "ggfsvd8pdt7h2ypkyy2l",
-        "yn5whocnpznkp8blruoh",
-        "ecwr0v0eltwitxfkvbcd",
-      ]);
+      setMap(
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d945.6206014962398!2d73.9681944!3d18.5522778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMzJzA4LjIiTiA3M8KwNTgnMDUuNSJF!5e0!3m2!1sen!2sin!4v1713478516699!5m2!1sen!2sin"
+          width="400"
+          height="300"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      );
 
       setCustomers([
         "nxssyh6mzqjorhgaoby2",
@@ -118,17 +133,25 @@ const ProjectLayout = () => {
         "baiea5fwhos494bt1ek6",
       ]);
 
-      setLayoutImg("p1vrdxuevul8x25qwfd6");
+      setLayoutImg("ds4sd8nen54xexaz5vvj");
     }
 
     //route to yashparkphase9
     if (project === "yashparkphase9") {
-      setSectionOneImg([
+      // setSectionOneImg([
+      //   "lmhklude0ujyr22hbtb2",
+      //   "txfblxduawyxeobadhhz",
+      //   "fhybjmnt5vax1ijqvnog",
+      // ]);
+      // setSectionTwoImg(["z4hebct4cgfeitc3cyvv", "sthwyvcppicnqstw7ud8"]);
+
+      setProjectImages([
         "lmhklude0ujyr22hbtb2",
         "txfblxduawyxeobadhhz",
         "fhybjmnt5vax1ijqvnog",
+        "z4hebct4cgfeitc3cyvv",
+        "sthwyvcppicnqstw7ud8",
       ]);
-      setSectionTwoImg(["z4hebct4cgfeitc3cyvv", "sthwyvcppicnqstw7ud8"]);
       setProjectName("Yash Park Phase 9");
       setDescription(
         "Discover Tranquil Living at Yash Park Phase 9 – Where Serenity Meets Convenience."
@@ -153,19 +176,16 @@ const ProjectLayout = () => {
                 </ul>
               </span>`);
 
-      setAttractionSectionOne([
-        "zikeorc7rbrsisu91sph",
-        "uaquumrp0xzxwppquotw",
-        "kiz4bhlqszilmeohteie",
-        "ijjcdgd71j3v21dxvx6w",
-      ]);
-
-      setAttractionSectionTwo([
-        "b9tcgpvzdpeewbd5njnq",
-        "ggfsvd8pdt7h2ypkyy2l",
-        "yn5whocnpznkp8blruoh",
-        "ecwr0v0eltwitxfkvbcd",
-      ]);
+      setMap(
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d945.6206014962398!2d73.9681944!3d18.5522778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMzJzA4LjIiTiA3M8KwNTgnMDUuNSJF!5e0!3m2!1sen!2sin!4v1713478516699!5m2!1sen!2sin"
+          width="400"
+          height="300"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      );
 
       setCustomers([
         "nxssyh6mzqjorhgaoby2",
@@ -176,24 +196,22 @@ const ProjectLayout = () => {
         "baiea5fwhos494bt1ek6",
       ]);
 
-      setLayoutImg("rai9s9mfskhidulkiqun");
+      setLayoutImg("zh8h0wlk53be4jne7kok");
     }
   }, []);
 
   return (
     <div>
       <ProjectDetail
-        sectionOneImg={sectionOneImg}
-        sectionTwoImg={sectionTwoImg}
         projectName={projectName}
         description={description}
         location={location}
         facalities={facalities}
         amations={amations}
         customers={customers}
-        attractionSectionOne={attractionSectionOne}
-        attractionSectionTwo={attractionSectionTwo}
+        projectImages={projectImages}
         layoutImg={layoutImg}
+        map={map}
       />
     </div>
   );
