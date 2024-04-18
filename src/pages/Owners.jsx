@@ -56,8 +56,8 @@ const Owners = () => {
 
       {/* div 2 */}
       {currentDiv === 2 && (
-        <div className="md:flex justify-center items-center gap-5 my-4 p-4 w-10/12">
-          <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12">
+        <div className="md:flex justify-center items-center gap-5 my-4 p-4 w-10/12 ">
+          <div className="md:flex justify-center gap-5 my-4 p-4">
             <img
               src={`${cloudinary_url}rwxfhtp9mcuvfhsjf3bq`}
               alt="owners"
@@ -90,14 +90,14 @@ const Owners = () => {
 
       {currentDiv === 3 && (
         <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12">
-          <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12">
+          <div className="md:flex justify-center gap-5 my-4 p-4 ">
             <img
               src={`${cloudinary_url}sd43rwddh0cwqqwhkbsp`}
               alt="owners"
               className=" md:w-80  shadow-lg"
             />
             <div className=" w-full md:w-1/2">
-              <h1 className="text-4xl font-serif font-semibold py-2">
+              <h1 className="text-4xl font-serif font-semibold py-2 text-center">
                 Swapnil Pawar{" "}
               </h1>
               <p className="py-4 px-4  text-lg">

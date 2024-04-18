@@ -9,10 +9,7 @@ const Customers = () => {
   return (
     <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center">
       <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
-        Satisfied Customers :{" "}
-        <span className="bg-red-700 text-xl p-4 text-white">
-          Under construction
-        </span>
+        Satisfied Customers
       </h1>
       <p className="m-4 text-center text-lg font-semibold py-4">
         At Nathkrupa Developers Ploting, our success is defined by the
@@ -20,18 +17,6 @@ const Customers = () => {
       </p>
 
       <div className="w-full max-h-1/2 ">
-        {/* {customerImages.map((image, index) => (
-          <img
-            key={index}
-            src={`${cloudinary_url}${image}`}
-            alt="customer"
-            className="w-"
-          />
-        ))} */}
-
-        {/* <ImageCarousel /> */}
-        {/* <CustomerCarousel /> */}
-
         <CustomerCarousel
           customers={[
             "v9zf9qtyomz8erhjbsdz",

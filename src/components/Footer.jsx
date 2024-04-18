@@ -11,7 +11,7 @@ import GoogleMaps from "./GoogleMaps";
 
 const Footer = () => {
   return (
-    <div className="py-8  flex justify-center gap-20 items-center flex-wrap">
+    <div className="py-8 flex justify-center gap-20 items-center flex-wrap">
       <div>
         <div className="flex ">
           <img
@@ -32,7 +32,7 @@ const Footer = () => {
             Submit{" "}
           </button>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between mx-6">
           <div className="flex flex-col gap-6 font-semibold">
             <h1 className="flex">
               <span>
