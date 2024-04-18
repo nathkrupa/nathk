@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import GoogleMaps from "../components/GoogleMaps";
 import { cloudinary_url } from "../utils/constants";
@@ -8,17 +8,30 @@ import { BookDial } from "../components/BookDial";
 import { LayoutDial } from "../components/LayoutDial";
 
 const YashPark = () => {
-  // const sectionOneImg = [
+  const [currentSection, setCurrentSection] = useState("sectionOne");
 
-  // ]
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSection((prevSection) =>
+        prevSection === "sectionOne" ? "sectionTwo" : "sectionOne"
+      );
+    }, 3000); // Switch sections every 3 seconds
 
-  // const sectionOne = (
-  //     <div >
-  //         <img src={} />
+    return () => clearInterval(interval);
+  }, []);
 
-  //     </div>
-  // )
+  const sectionOneImg = [
+    "dzjucbikbmodcgbxz0wr",
+    "p0mzhgplcuybp2zguxvb",
+    "yjjxdtwvnhcywfpdstru",
+    "rhq676e8mkhcmczli8fr",
+  ];
 
+  const sectionTwoImg = [
+    "rt8p89nosc91rzoovkts",
+    "m4jdq7mkjczm7rn3mhkb",
+    "lwyck6yftmdjfkhtihqi",
+  ];
   return (
     <div className="">
       <Navbar />
@@ -43,11 +56,12 @@ const YashPark = () => {
           </h1>
           <div className="flex justify-center items-center ">
             <p className=" text-lg p-3 w-full md:w-1/3 ">
-              Rajvir Plots offers a unique opportunity to own a piece of prime
-              real estate in the vibrant locale of Awalwadi Road. Nestled in
-              close proximity to BIOVET PRIVATE LIMITED, this meticulously
-              planned project boasts of spacious plots surrounded by lush
-              greenery and scenic views.
+              Yash Park, strategically positioned in the heart of Kharadi,
+              offers an exceptional opportunity to own prime real estate in one
+              of Pune's most coveted locations. Nestled in front of YOO Villas
+              by Panchshil Towers and alongside Panchshil Towers, this
+              meticulously planned project provides spacious plots surrounded by
+              lush greenery and modern amenities.
               <span>
                 <ul className="list-disc p-4">
                   <li>Health Facilities in 3 Mins</li>

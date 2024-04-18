@@ -29,7 +29,7 @@ const RajvirPlots = () => {
 
   const sectionTwoImg = [
     "rt8p89nosc91rzoovkts",
-    "m4jdq7mkjczm7rn3mhkb",
+    // "m4jdq7mkjczm7rn3mhkb",
     "lwyck6yftmdjfkhtihqi",
   ];
 
@@ -37,45 +37,44 @@ const RajvirPlots = () => {
     <div className="min-h-screen">
       <Navbar />
       <div className="flex justify-center items-center flex-col">
-        <div className="flex flex-col justify-center items-center mt-48">
+        <div className="flex flex-col justify-center items-center mt-48 ">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
             Rajvir Plots
-            <span className="bg-red-700 text-xl p-4 text-white">
-              Under construction
-            </span>
           </h1>
           <p className="m-4 text-center text-lg font-semibold py-4">
             Discover Tranquil Living at Rajvir Plots – Where Serenity Meets
             Convenience.
           </p>
           {currentSection === "sectionOne" ? (
-            <div className="grid grid-cols-2 gap-5 p-4 w-3/4">
+            <div className="grid grid-cols-2 gap-5 p-4 md:w-3/4">
               {sectionOneImg.map((img, index) => (
                 <img
                   key={index}
                   src={`${cloudinary_url}${img}`}
                   alt={`sectionOne-${index}`}
+                  className="shadow-lg"
                 />
               ))}
             </div>
           ) : (
-            <div className="flex gap-5 p-4 w-3/4 justify-center items-center">
+            <div className="flex max-md:flex-wrap gap-5  w-3/4 justify-center items-center">
               {sectionTwoImg.map((img, index) => (
                 <img
                   key={index}
                   src={`${cloudinary_url}${img}`}
                   alt={`sectionTwo-${index}`}
+                  className="shadow-lg w-36 md:w-1/2"
                 />
               ))}
             </div>
           )}{" "}
         </div>
         {/* Project location and details */}
-        <div className="flex flex-col justify-center items-center min-h-screen">
+        <div className="flex flex-col justify-center items-center ">
           <h1 className="text-2xl font-semibold p-4">
             Location: Awalwadi Road, near BIOVET PRIVATE LIMITED
           </h1>
-          <div className="flex justify-center items-center ">
+          <div className="flex flex-wrap p-4 justify-center items-center ">
             <p className=" text-lg p-3 w-full md:w-1/3 ">
               Rajvir Plots offers a unique opportunity to own a piece of prime
               real estate in the vibrant locale of Awalwadi Road. Nestled in
@@ -92,7 +91,7 @@ const RajvirPlots = () => {
                 </ul>
               </span>
             </p>
-            <div className="h-72 w-1/3">
+            <div className="h-72 md:w-1/3 mb-4">
               {" "}
               <GoogleMaps />
             </div>
@@ -105,7 +104,7 @@ const RajvirPlots = () => {
 
           <LayoutDial />
 
-          <div className="min-h-screen border-b-2">
+          <div className=" border-b-2">
             <img
               src={`${cloudinary_url}${"p1vrdxuevul8x25qwfd6"}`}
               alt="layout"
@@ -114,7 +113,7 @@ const RajvirPlots = () => {
 
           {/* satisfied Customers */}
 
-          <div className="min-h-screen w-full flex flex-col justify-center items-center border-b-2">
+          <div className=" w-full flex flex-col justify-center items-center border-b-2">
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-center py-6 ">
               Satisfied Customers
             </h1>
@@ -122,8 +121,11 @@ const RajvirPlots = () => {
             <CustomerCarousel
               customers={[
                 "v9zf9qtyomz8erhjbsdz",
-                "oq7xu8plkxg9s8xglfqz",
                 "usmwejvsji3aoan0hl4i",
+                "hq896o72fdrfcf9rvurq",
+                "wko5zpyk4u2mkj0qacnc",
+                "cr8zrdng4igfjplvhxyv",
+                "rwn0koevarnk0vwjswfb",
               ]}
             />
 
