@@ -80,13 +80,8 @@ const Owners = () => {
               </p>
               <div className="flex gap-4 justify-center">
                 <Facebook className="text-purple-600  cursor-pointer " />
-                <a
-                  href="https://www.instagram.com/swapnil_pawar_9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="text-purple-600 cursor-pointer " />
-                </a>
+
+                <Instagram className="text-purple-600 cursor-pointer " />
                 <Twitter className="text-purple-600   cursor-pointer  " />
               </div>
             </div>
@@ -120,7 +115,13 @@ const Owners = () => {
               </p>
               <div className="flex gap-4 justify-center">
                 <Facebook className="text-purple-600  cursor-pointer " />
-                <Instagram className="text-purple-600 cursor-pointer " />
+                <a
+                  href="https://www.instagram.com/swapnil_pawar_9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="text-purple-600 cursor-pointer " />
+                </a>
                 <Twitter className="text-purple-600   cursor-pointer  " />
               </div>
             </div>

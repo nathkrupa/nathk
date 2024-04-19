@@ -53,6 +53,9 @@ const Footer = () => {
               </span>
               +91-9822692040
             </h1>
+            <p className="hidden text-gray-500 md:block">
+              @ Made my Nathkrupa developers | Scipedia
+            </p>
           </div>
 
           <div className="flex gap-4">
@@ -83,6 +86,9 @@ const Footer = () => {
         <h1 className="text-2xl font-semibold ">Office Location</h1>
         <GoogleMaps />
       </div>
+      <p className=" pb-4 hidden text-gray-500 max-md:block">
+        @ Made my Nathkrupa developers | Scipedia
+      </p>
     </div>
   );
 };
