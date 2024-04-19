@@ -24,6 +24,9 @@ const router = createBrowserRouter(
       {/* <Route path="/yashpark" element={<YashPark />} /> */}
 
       <Route path="/:project" element={<ProjectLayout />} />
+      <Route path="/rajvirplots" element={<ProjectLayout />} />
+      <Route path="/yashparkphase7" element={<ProjectLayout />} />
+      <Route path="/yashparkphase9" element={<ProjectLayout />} />
     </>
   )
 );

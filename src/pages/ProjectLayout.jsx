@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import ProjectDetail from "./ProjectDetail";
 
 const ProjectLayout = () => {
-  let { project } = useParams();
-
+  let { project, rajvirplots } = useParams();
+  const routeParams = useLocation();
   const [projectName, setProjectName] = useState("");
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
@@ -15,9 +15,11 @@ const ProjectLayout = () => {
   const [layoutImg, setLayoutImg] = useState("");
   const [projectImages, setProjectImages] = useState([]);
 
+  console.log(routeParams.pathname);
+
   useEffect(() => {
     // route to rajvirplots
-    if (project === "rajvirplots") {
+    if (project === "rajvirplots" || routeParams.pathname === "/rajvirplots") {
       setProjectImages([
         "yxdghzrpwhgrsbygvxfl",
         "lvxmq301htsuk6blwldb",
@@ -71,7 +73,10 @@ const ProjectLayout = () => {
     }
 
     //route to yashparkphase7
-    if (project === "yashparkphase7") {
+    if (
+      project === "yashparkphase7" ||
+      routeParams.pathname === "/yashparkphase7"
+    ) {
       // setSectionOneImg([
       //   "dzjucbikbmodcgbxz0wr",
       //   "p0mzhgplcuybp2zguxvb",
@@ -137,7 +142,10 @@ const ProjectLayout = () => {
     }
 
     //route to yashparkphase9
-    if (project === "yashparkphase9") {
+    if (
+      project === "yashparkphase9" ||
+      routeParams.pathname === "/yashparkphase9"
+    ) {
       // setSectionOneImg([
       //   "lmhklude0ujyr22hbtb2",
       //   "txfblxduawyxeobadhhz",
