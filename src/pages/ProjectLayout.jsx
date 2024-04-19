@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import ProjectDetail from "./ProjectDetail";
 
 const ProjectLayout = () => {
-  let { project, rajvirplots } = useParams();
+  let { project } = useParams();
   const routeParams = useLocation();
   const [projectName, setProjectName] = useState("");
   const [description, setDescription] = useState("");
@@ -14,8 +14,6 @@ const ProjectLayout = () => {
   const [map, setMap] = useState();
   const [layoutImg, setLayoutImg] = useState("");
   const [projectImages, setProjectImages] = useState([]);
-
-  console.log(routeParams.pathname);
 
   useEffect(() => {
     // route to rajvirplots
