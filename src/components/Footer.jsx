@@ -33,7 +33,7 @@ const Footer = () => {
           <input
             type="text"
             placeholder="Message..."
-            className="mx-4 px-8 py-2 outline-none border-none"
+            className="mx-4 px-6 py-2 outline-none border-none"
           />
           <button className="px-6 py-2 bg-purple-600 text-white p rounded-md">
             Submit{" "}

@@ -40,7 +40,7 @@ const ProjectDetail = ({
   return (
     <div className="">
       <Navbar />
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col m-4 text-center">
         <div className="flex flex-col justify-center items-center mt-48">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
             {projectName}{" "}
@@ -56,7 +56,7 @@ const ProjectDetail = ({
           <h1 className="text-2xl font-semibold p-4">{location} </h1>
           <div className="flex flex-wrap p-4 justify-center items-center ">
             <p
-              className=" text-lg p-3 w-full md:w-1/3 "
+              className=" text-lg p-3 w-full md:w-1/3 text-left"
               dangerouslySetInnerHTML={{ __html: facalities }}
             ></p>
             <div className="h-72 md:w-1/3 mb-4 pl-4">{map}</div>
