@@ -29,11 +29,11 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold my-8">Nathkrupa Developers</h1>
         </div>
 
-        <div className="px-4 py-3 bg-white my-8 flex border border-gray-300 rounded-md shadow-sm">
+        <div className="px-4 py-3 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
           <input
             type="text"
             placeholder="Message..."
-            className="mx-4 px-6 py-2 outline-none border-none"
+            className="mx-4 py-2 outline-none border-none"
           />
           <button className="px-6 py-2 bg-purple-600 text-white p rounded-md">
             Submit{" "}
