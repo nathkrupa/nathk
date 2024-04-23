@@ -122,6 +122,9 @@ const ProjectDetail = ({
               {" "}
               <CustomerCarousel customers={customers} />
             </div>
+            <div className=" border-b-2 justify-center flex w-1/2  py-4">
+              <ImagesDial projectImages={customers} />
+            </div>
 
             <BookDial />
           </div>

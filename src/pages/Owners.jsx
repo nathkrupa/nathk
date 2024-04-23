@@ -7,7 +7,7 @@ const Owners = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentDiv((prevDiv) => (prevDiv % 3) + 1); // Cycle through divs 1, 2, 3
+      setCurrentDiv((prevDiv) => (prevDiv % 2) + 1); // Cycle through divs 1, 2, 3
     }, 3000);
 
     return () => clearInterval(interval);
@@ -55,41 +55,8 @@ const Owners = () => {
       )}
 
       {/* div 2 */}
+
       {currentDiv === 2 && (
-        <div className="md:flex justify-center items-center gap-5 my-4 p-4 w-10/12 text-center">
-          <div className="md:flex justify-center gap-5 my-4 p-4 ">
-            <img
-              src={`${cloudinary_url}rwxfhtp9mcuvfhsjf3bq`}
-              alt="owners"
-              className=" md:w-80  shadow-lg"
-            />
-            <div className="w-full  md:w-1/2">
-              <h1 className="text-4xl font-serif font-semibold py-2">
-                Eshwar Budhawant
-              </h1>
-              <p className="py-4 px-4  text-lg ">
-                <>
-                  With a rich background in business and a deep-rooted passion
-                  for real estate, Eshwar brings invaluable expertise and
-                  insight to the company. during which he has established
-                  himself as a respected figure known for his integrity,
-                  dedication, and commitment to excellence. Eshwar's vision for
-                  Nathkrupa Developers Ploting is rooted in a steadfast belief
-                  in quality, innovation, and customer satisfaction.
-                </>
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Facebook className="text-purple-600  cursor-pointer " />
-
-                <Instagram className="text-purple-600 cursor-pointer " />
-                <Twitter className="text-purple-600   cursor-pointer  " />
-              </div>
-            </div>
-          </div>{" "}
-        </div>
-      )}
-
-      {currentDiv === 3 && (
         <div className="md:flex justify-center gap-5 my-4 p-4 w-10/12 text-center ">
           <div className="md:flex justify-center gap-5 my-4 p-4 ">
             <img

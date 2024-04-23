@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import GoogleMaps from "./GoogleMaps";
 import { Link } from "react-router-dom";
+import { PiWhatsappLogo } from "react-icons/pi";
 
 const Footer = () => {
   const scrollToSection = (id) => {
@@ -53,6 +54,19 @@ const Footer = () => {
               </span>
               +91-9822692040
             </h1>
+            <h1 className="flex">
+              <span>
+                <PiWhatsappLogo className="text-purple-600 mr-4 text-2xl" />
+              </span>
+              <a
+                className="hover:underline"
+                href="https://wa.me/+918623926920"
+                target="_blank"
+              >
+                +91 8623926920
+              </a>
+            </h1>
+
             <p className="hidden text-gray-500 md:block">
               @ Made my Nathkrupa developers | Scipedia
             </p>

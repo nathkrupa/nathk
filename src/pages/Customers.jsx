@@ -4,6 +4,7 @@ import ImageCarousel from "../components/ImageCarousel";
 import CarouselTestimonial from "../components/CustomerCarousel";
 import CustomerCarousel from "../components/CustomerCarousel";
 import CarouselProject from "../components/CarouselProject";
+import { ImagesDial } from "../components/ImagesDial";
 
 const Customers = () => {
   return (
@@ -19,6 +20,19 @@ const Customers = () => {
       <div className="relative ">
         <CustomerCarousel
           customers={[
+            "v9zf9qtyomz8erhjbsdz",
+            "oq7xu8plkxg9s8xglfqz",
+            "usmwejvsji3aoan0hl4i",
+            "qjycqkyxn5zjj3ausq9f",
+            "kcwox0mhtykgojab5mvd",
+            "bvhmksfdqomyuh8zcsdz",
+            "baiea5fwhos494bt1ek6",
+          ]}
+        />
+      </div>
+      <div>
+        <ImagesDial
+          projectImages={[
             "v9zf9qtyomz8erhjbsdz",
             "oq7xu8plkxg9s8xglfqz",
             "usmwejvsji3aoan0hl4i",
