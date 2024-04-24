@@ -6,14 +6,19 @@ const CustomerCarousel = ({ customers }) => {
   const duplicatedCustomers = [...customers, ...customers];
 
   return (
-    <div className="overflow-hidden w-full relative">
-      <div className="flex md:space-x-4 animate-slide">
+    <div className="overflow-hidden relative ">
+      <div
+        className="flex md:space-x-4 animate-slide"
+        style={{ width: `${duplicatedCustomers.length + 10 * 100}%` }}
+      >
         {duplicatedCustomers.map((customer, index) => (
           <img
             key={index}
             src={`${cloudinary_url}${customer}`}
             alt={customer}
             className="p-2 md:p-4 shadow-md w-36 aspect-square md:w-1/4 "
+            style={{ minWidth: `${100 / duplicatedCustomers.length}%` }}
+
             // style={{ minWidth: "100%", minHeight: "auto" }}
           />
         ))}

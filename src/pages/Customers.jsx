@@ -8,7 +8,7 @@ import { ImagesDial } from "../components/ImagesDial";
 
 const Customers = () => {
   return (
-    <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center">
+    <div className="mt-8 flex flex-col border-b-2 min-h-screen justify-center items-center ">
       <h1 className="text-4xl md:text-6xl font-serif font-bold text-center">
         Satisfied Customers
       </h1>
@@ -17,7 +17,7 @@ const Customers = () => {
         satisfaction of our customers
       </p>
 
-      <div className="relative ">
+      <div className="relative w-screen">
         <CustomerCarousel
           customers={[
             "v9zf9qtyomz8erhjbsdz",
@@ -27,6 +27,18 @@ const Customers = () => {
             "kcwox0mhtykgojab5mvd",
             "bvhmksfdqomyuh8zcsdz",
             "baiea5fwhos494bt1ek6",
+
+            "jmdwewy6bwsfgrby4m1n",
+            "nd1vcjacbipl8brh9rfw",
+            "dq32gyhivdomcyk416yx",
+            "gdits2kopmczidqdofpq",
+            "kxolmuvncev4nbc0cexc",
+            "i9pup3up9yjtwg7spl1b",
+            "ysfoc0ydli7pmlsybc8h",
+            "ln6qbeyele0wajcmp34v",
+            "hhzpr9voovxblr603w20",
+            "n3coiijssjg03kvumjhn",
+            "ddzxaebljknf1l05ysvm",
           ]}
         />
       </div>
@@ -40,6 +52,18 @@ const Customers = () => {
             "kcwox0mhtykgojab5mvd",
             "bvhmksfdqomyuh8zcsdz",
             "baiea5fwhos494bt1ek6",
+
+            "jmdwewy6bwsfgrby4m1n",
+            "nd1vcjacbipl8brh9rfw",
+            "dq32gyhivdomcyk416yx",
+            "gdits2kopmczidqdofpq",
+            "kxolmuvncev4nbc0cexc",
+            "i9pup3up9yjtwg7spl1b",
+            "ysfoc0ydli7pmlsybc8h",
+            "ln6qbeyele0wajcmp34v",
+            "hhzpr9voovxblr603w20",
+            "n3coiijssjg03kvumjhn",
+            "ddzxaebljknf1l05ysvm",
           ]}
         />
       </div>
