@@ -15,6 +15,7 @@ const ProjectLayout = () => {
   const [layoutImg, setLayoutImg] = useState("");
   const [projectImages, setProjectImages] = useState([]);
   const [coverImg, setCoverImg] = useState("");
+  const [projectVideos, setProjectVideos] = useState([]);
 
   useEffect(() => {
     // route to rajvirplots
@@ -71,6 +72,12 @@ const ProjectLayout = () => {
       ]);
 
       setCoverImg("w214msdlrsqf1isjjmsx");
+
+      setProjectVideos([
+        "ktplrsne9s8otv5y8p5x",
+        "gpcpmrt7cv7b9nbmjox1",
+        "hglitsb6tdhdizsfjulm",
+      ]);
     }
 
     //route to yashparkphase7
@@ -222,6 +229,7 @@ const ProjectLayout = () => {
         layoutImg={layoutImg}
         map={map}
         coverImg={coverImg}
+        projectVideos={projectVideos}
       />
     </div>
   );

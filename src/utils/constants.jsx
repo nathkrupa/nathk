@@ -1,6 +1,9 @@
 export const cloudinary_url =
   "https://res.cloudinary.com/dvdrkucjh/image/upload/";
 
+export const cloudinary_video_url =
+  "https://res.cloudinary.com/dvdrkucjh/video/upload/";
+
 export const projects = [
   {
     name: "Rajvir Plots",

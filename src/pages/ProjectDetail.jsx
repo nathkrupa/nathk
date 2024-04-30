@@ -9,6 +9,7 @@ import { BookDial } from "../components/BookDial";
 import { SpecialAttractions } from "../components/SpecialAttractions";
 import { ImagesDial } from "../components/ImagesDial";
 import Glide from "@glidejs/glide";
+import { VideoDial } from "../components/VideoDial";
 
 const ProjectDetail = ({
   projectName,
@@ -19,6 +20,7 @@ const ProjectDetail = ({
   customers,
   layoutImg,
   coverImg,
+  projectVideos,
   map,
 }) => {
   const [currentSection, setCurrentSection] = useState("sectionOne");
@@ -49,8 +51,11 @@ const ProjectDetail = ({
           <p className="m-4 text-center text-lg font-semibold py-4">
             {description}
           </p>
-
-          <ImagesDial projectImages={projectImages} />
+          <div className="flex gap-5">
+            {" "}
+            <ImagesDial projectImages={projectImages} />
+            <VideoDial projectVideos={projectVideos} />
+          </div>
         </div>
 
         <div className="p-4 m-4 flex justify-center items-center">
