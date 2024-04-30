@@ -3,24 +3,32 @@ import { cloudinary_url } from "../utils/constants";
 
 const CustomerCarousel = ({ customers }) => {
   // Duplicate the array to ensure smooth looping
-  const duplicatedCustomers = [...customers, ...customers];
+  const duplicatedCustomers = [
+    ...customers,
+    ...customers,
+    ...customers,
+    ...customers,
+    ...customers,
+  ];
 
   return (
     <div className="overflow-hidden relative ">
       <div
-        className="flex md:space-x-4 animate-slide"
-        style={{ width: `${duplicatedCustomers.length + 10 * 100}%` }}
+        className="flex md:space-x-4 animate-loop-scroll"
+        style={{ width: `${duplicatedCustomers.length + 20 * 100}%` }}
       >
         {duplicatedCustomers.map((customer, index) => (
-          <img
-            key={index}
-            src={`${cloudinary_url}${customer}`}
-            alt={customer}
-            className="p-2 md:p-4 shadow-md w-36 aspect-square md:w-1/4 "
-            style={{ minWidth: `${100 / duplicatedCustomers.length}%` }}
+          <div className="">
+            <img
+              key={index}
+              src={`${cloudinary_url}${customer}`}
+              alt={customer}
+              className="p-2 md:p-4 shadow-md w-36  md:w-96"
+              style={{ minWidth: `${100 / duplicatedCustomers.length}%` }}
 
-            // style={{ minWidth: "100%", minHeight: "auto" }}
-          />
+              // style={{ minWidth: "100%", minHeight: "auto" }}
+            />
+          </div>
         ))}
       </div>
     </div>

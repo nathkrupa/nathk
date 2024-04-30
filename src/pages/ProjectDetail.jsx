@@ -51,6 +51,10 @@ const ProjectDetail = ({
 
           <ImagesDial projectImages={projectImages} />
         </div>
+
+        <div>
+          <img src={`${cloudinary_url}wre9etdqnmd2mhoks5ir`} alt="cover" />
+        </div>
         {/* Project location and details */}
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-2xl font-semibold p-4">{location} </h1>
@@ -118,7 +122,7 @@ const ProjectDetail = ({
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-center py-6 ">
               Satisfied Customers
             </h1>
-            <div className="max-w-screen">
+            <div className="realative w-screen">
               {" "}
               <CustomerCarousel customers={customers} />
             </div>
