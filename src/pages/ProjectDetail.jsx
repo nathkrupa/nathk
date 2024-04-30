@@ -18,6 +18,7 @@ const ProjectDetail = ({
   projectImages,
   customers,
   layoutImg,
+  coverImg,
   map,
 }) => {
   const [currentSection, setCurrentSection] = useState("sectionOne");
@@ -50,6 +51,21 @@ const ProjectDetail = ({
           </p>
 
           <ImagesDial projectImages={projectImages} />
+        </div>
+
+        <div className="p-4 m-4 flex justify-center items-center">
+          <img
+            className="w-1/3 m-4"
+            src={`${cloudinary_url}czuqu9athktvwtodkjjp`}
+            alt="cover"
+          />
+          {coverImg && (
+            <img
+              className="w-1/3 m-4 "
+              src={`${cloudinary_url}${coverImg}`}
+              alt="cover2"
+            />
+          )}
         </div>
 
         <div>

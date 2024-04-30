@@ -14,6 +14,7 @@ const ProjectLayout = () => {
   const [map, setMap] = useState();
   const [layoutImg, setLayoutImg] = useState("");
   const [projectImages, setProjectImages] = useState([]);
+  const [coverImg, setCoverImg] = useState("");
 
   useEffect(() => {
     // route to rajvirplots
@@ -68,6 +69,8 @@ const ProjectLayout = () => {
         "cr8zrdng4igfjplvhxyv",
         "rwn0koevarnk0vwjswfb",
       ]);
+
+      setCoverImg("w214msdlrsqf1isjjmsx");
     }
 
     //route to yashparkphase7
@@ -218,6 +221,7 @@ const ProjectLayout = () => {
         projectImages={projectImages}
         layoutImg={layoutImg}
         map={map}
+        coverImg={coverImg}
       />
     </div>
   );
