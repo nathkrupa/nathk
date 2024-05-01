@@ -62,7 +62,7 @@ const ProjectDetail = ({
           <img
             className="w-1/3 m-4"
             src={`${cloudinary_url}czuqu9athktvwtodkjjp`}
-            alt="cover"
+            alt="coverImg"
           />
           {coverImg && (
             <img
@@ -71,10 +71,6 @@ const ProjectDetail = ({
               alt="cover2"
             />
           )}
-        </div>
-
-        <div>
-          <img src={`${cloudinary_url}wre9etdqnmd2mhoks5ir`} alt="cover" />
         </div>
         {/* Project location and details */}
         <div className="flex flex-col justify-center items-center ">
@@ -102,6 +98,8 @@ const ProjectDetail = ({
             src={`${cloudinary_url}wre9etdqnmd2mhoks5ir`}
             alt="amations"
           />
+
+          {/* mobile view */}
 
           <div className="max-md:flex flex-col hidden">
             <img
