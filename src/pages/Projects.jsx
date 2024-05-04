@@ -29,15 +29,6 @@ const Projects = () => {
 
         {/* <Carousal /> */}
       </div>
-
-      <div className="md:w-1/2 m-4 p-12 rounded-3xl bg-white border-t-2">
-        <video
-          src={`${cloudinary_video_url}nnxdb9cmuz8quuefx9mp`}
-          alt="video"
-          className="shadow-lg"
-          controls
-        />
-      </div>
     </div>
   );
 };

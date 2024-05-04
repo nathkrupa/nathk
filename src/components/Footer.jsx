@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Facebook,
   Instagram,
@@ -10,6 +10,9 @@ import {
 import GoogleMaps from "./GoogleMaps";
 import { Link } from "react-router-dom";
 import { PiWhatsappLogo } from "react-icons/pi";
+import { Button, Modal } from "flowbite-react";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
+import axios from "axios";
 
 const Footer = () => {
   const scrollToSection = (id) => {
@@ -35,9 +38,11 @@ const Footer = () => {
             type="text"
             placeholder="Message..."
             className=" py-2 outline-none border-none"
+            onChange={(e) => setInputMessage(e.target.value)}
           />
+
           <button className="px-6 py-2 bg-purple-600 text-white p rounded-md">
-            Submit{" "}
+            Submit
           </button>
         </div>
         <div className="flex justify-between mx-3">
