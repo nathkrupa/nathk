@@ -9,7 +9,7 @@ import Owners from "./pages/Owners";
 
 function App() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 max-w-screen-2xl overflow-hidden">
       <div id="home">
         <Navbar />
         <Home />
