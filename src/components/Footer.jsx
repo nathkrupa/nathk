@@ -33,11 +33,11 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold my-8">Nathkrupa Developers</h1>
         </div>
 
-        <div className="px-3 py-3 md:px-6 max-md:w-5/6 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
+        <div className="px-3 py-3  md:px-6 w-5/6 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
           <input
             type="text"
             placeholder="Message..."
-            className=" py-2 outline-none border-none"
+            className=" py-2 w-full mx-2  outline-none border-none"
             onChange={(e) => setInputMessage(e.target.value)}
           />
 
