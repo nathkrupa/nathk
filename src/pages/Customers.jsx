@@ -17,7 +17,7 @@ const Customers = () => {
         satisfaction of our customers
       </p>
 
-      <div className="relative w-screen">
+      <div className=" md:relative md:w-screen">
         <CustomerCarousel
           customers={[
             "v9zf9qtyomz8erhjbsdz",

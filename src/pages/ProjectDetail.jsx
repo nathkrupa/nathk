@@ -80,7 +80,9 @@ const ProjectDetail = ({
               className=" text-lg p-4 w-full md:w-1/3 md:text-left "
               dangerouslySetInnerHTML={{ __html: facalities }}
             ></p>
-            <div className="h-72 md:w-1/3 mb-4 pl-4">{map}</div>
+            <div className="h-72 w-60 flex justify-center items-center md:w-1/3 mb-4 md:pl-4">
+              {map}
+            </div>
           </div>
 
           {/* special Attraction layout */}
@@ -137,11 +139,11 @@ const ProjectDetail = ({
 
           {/* satisfied Customers */}
 
-          <div className=" w-full flex flex-col justify-center items-center border-b-2">
+          <div className=" w-screen flex flex-col justify-center items-center border-b-2">
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-center py-6 ">
               Satisfied Customers
             </h1>
-            <div className="realative w-screen">
+            <div className="md:realative w-full overflow-x-hidden md:w-screen">
               {" "}
               <CustomerCarousel customers={customers} />
             </div>
