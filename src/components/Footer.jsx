@@ -33,7 +33,7 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold my-8">Nathkrupa Developers</h1>
         </div>
 
-        <div className="px-4 py-3 w-full  bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
+        <div className="px-3 py-3 md:px-6 max-md:w-5/6 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
           <input
             type="text"
             placeholder="Message..."
@@ -41,7 +41,7 @@ const Footer = () => {
             onChange={(e) => setInputMessage(e.target.value)}
           />
 
-          <button className="px-6 py-2 bg-purple-600 text-white p rounded-md">
+          <button className="px-3 py-1 md:px-4 md:text-base text-sm bg-purple-600 text-white p rounded-md">
             Submit
           </button>
         </div>
