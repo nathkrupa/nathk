@@ -101,7 +101,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="h-60 w-96">
+      <div className="h-60 w-80">
         <h1 className="text-2xl font-semibold ">Office Location</h1>
         <GoogleMaps />
       </div>
