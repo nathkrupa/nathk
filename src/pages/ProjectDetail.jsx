@@ -58,15 +58,15 @@ const ProjectDetail = ({
           </div>
         </div>
 
-        <div className="p-4 m-4 flex justify-center items-center">
+        <div className="p-4 m-4 md:flex justify-center items-center">
           <img
-            className="w-1/3 m-4"
+            className=" md:w-1/3 m-4"
             src={`${cloudinary_url}czuqu9athktvwtodkjjp`}
             alt="coverImg"
           />
           {coverImg && (
             <img
-              className="w-1/3 m-4 "
+              className=" md:w-1/3 m-4 "
               src={`${cloudinary_url}${coverImg}`}
               alt="cover2"
             />
@@ -77,14 +77,14 @@ const ProjectDetail = ({
           <h1 className="text-2xl font-semibold p-4">{location} </h1>
           <div className="flex flex-wrap p-4 justify-center items-center ">
             <p
-              className=" text-lg p-3 w-full md:w-1/3 text-left"
+              className=" text-lg p-4 w-full md:w-1/3 md:text-left "
               dangerouslySetInnerHTML={{ __html: facalities }}
             ></p>
             <div className="h-72 md:w-1/3 mb-4 pl-4">{map}</div>
           </div>
 
           {/* special Attraction layout */}
-          <div className="p-4 w-full md:w-1/2  border-t-2 border-b-2 flex flex-col justify-center text-center">
+          <div className="p-4 w-screen md:w-1/2  border-t-2 border-b-2 flex flex-col justify-center text-center">
             <h1 className="text-3xl md:text-5xl font-serif font-bold  py-6">
               {" "}
               Special Attractions
@@ -130,7 +130,7 @@ const ProjectDetail = ({
           <div className="py-6 flex flex-col justify-center items-center  border-t-2">
             <LayoutDial layoutImg={layoutImg} />
 
-            <div className=" border-b-2">
+            <div className="max-md:w-screen border-b-2">
               <img src={`${cloudinary_url}${layoutImg}`} alt="layout" />
             </div>
           </div>
